@@ -1,0 +1,19 @@
+{
+  "name": "std-pour",
+  "version": "0.1.0",
+  "description": "Promise-based subprocess execution that writes output in real-time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelBCarter/std-pour.git"
+  },
+  "author": "Joel Carter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelBCarter/std-pour/issues"
+  },
+  "homepage": "https://github.com/JoelBCarter/std-pour#readme"
+}
