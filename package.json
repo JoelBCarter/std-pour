@@ -4,7 +4,7 @@
   "description": "Promise-based subprocess execution that writes output in real-time.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JoelBCarter/std-pour/issues"
   },
-  "homepage": "https://github.com/JoelBCarter/std-pour#readme"
+  "homepage": "https://github.com/JoelBCarter/std-pour#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.4"
+  }
 }
