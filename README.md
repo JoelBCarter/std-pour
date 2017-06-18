@@ -38,5 +38,26 @@ The command, without any of the optional arguments supplied, will default to wri
 function pourFile (cmd, args, opts, stdoutFile, stderrFile = stdoutFile)
 ```
 `pourFile` is useful for writing command output to a file. `stdoutFile` should be a path to a file that will be created for you. Likewise, if you want `stdout` written to a seperate file, you can supply the path to a file which will be created for logging `stdout`.
+# Windows Users
+If you're on Windows Node.js does some funny business when handling quotes that may result in you issuing a command that you know works from the console, but does not when run in Node. For example the following _should_ work:
+
+```
+pour('ping', ['"8.8.8.8"'], {});
+```
+but fails with the following:
+
+> Ping request could not find host "8.8.8.8". Please check the name and try again.
+
+There's a fantastically undocumented option `windowsVerbatimArguments` for handling quotes/similar that seems to do the trick, just be sure to add the following to your `opts` object:
+```
+const opts = {
+    windowsVerbatimArguments: true
+}
+```
+and your command should be back in business.
+
+```
+ pour('ping', ['"8.8.8.8"'], { windowsVerbatimArguments: true });
+ ```
 # Honorable-Mentions
 This library is inspired by (but in no way affiliated with or endorsed by) the great folks and food at [The Standard Pour](http://www.standard-pour.com/).
