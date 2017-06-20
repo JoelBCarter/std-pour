@@ -37,7 +37,7 @@ The command, without any of the optional arguments supplied, will default to wri
 ```
 function pourFile (cmd, args, opts, stdoutFile, stderrFile = stdoutFile)
 ```
-`pourFile` is useful for writing command output to a file. `stdoutFile` should be a path to a file that will be created for you. Likewise, if you want `stdout` written to a seperate file, you can supply the path to a file which will be created for logging `stdout`.
+`pourFile` is useful for writing command output to a file. `stdoutFile` should be a path to a file that will be created for you. Likewise, if you want `stderr` written to a seperate file, you can supply the path to a file which will be created for logging `stderr`.
 # Windows Users
 If you're on Windows Node.js does some funny business when handling quotes that may result in you issuing a command that you know works from the console, but does not when run in Node. For example the following _should_ work:
 
